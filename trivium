@@ -116,14 +116,19 @@ public class TriviumChiper {
 		 //byte read_b = s.nextByte();
 		 
 		 String [] a = s.next().split("");
-		 int [] key = new int [80];
+		 int [] key = new int [36];
 		 String [] b = s.next().split("");
-		 int [] iv = new int [80];
+		 int [] iv = new int [36];
 		 for(int i = 0; i < a.length; i++) {
 			 key[i] = Integer.parseInt(a[i]);
 		 }
 		 for(int i = 0; i < b.length; i++) {
 			 iv[i] = Integer.parseInt(b[i]);
+		 }
+		 String [] txt = s.next().split("");
+		 int [] tt = new int [36];
+		 for(int i = 0; i < txt.length; i++) {
+			 tt[i] = Byte.parseByte(txt[i]);
 		 }
 		 s.close();
 		TR_init(key, iv, array);
